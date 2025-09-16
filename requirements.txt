@@ -1,0 +1,2 @@
+jupyter
+ipympl
