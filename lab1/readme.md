@@ -16,17 +16,26 @@
 
 ## Создание виртуального окружения
 
+Все команды далее стоит выполнять в корневой папке проекта, в данном случае `2025-NN-AI`
+
 ```bash
 # Установка virtualenv
 python -m pip install virtualenv
 
 # Создание окружения
 python -m virtualenv myenv
+# myenv - имя для папки с виртуальным окружением, выбирается пользователем
+```
 
+```bash
 # Активация окружения
-# Windows:
+# только для Windows:
 myenv\Scripts\activate
-# macOS/Linux:
+```
+
+```bash
+# Активация окружения
+# только для macOS/Linux:
 source myenv/bin/activate
 ```
 
@@ -43,9 +52,7 @@ pip install jupyter
 ## Сохранение зависимостей
 
 ```bash
-# Экспорт установленных пакетов
-pip freeze > requirements.txt
-
-# Установка из requirements.txt
-pip install -r requirements.txt
+# Установка зависимостей из requirements.txt
+pip install -r requirements.txt #  общие пакеты
+pip install -r lab1\requirements.txt # пакеты для лабораторной 1
 ```
