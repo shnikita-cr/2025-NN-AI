@@ -49,7 +49,7 @@ pip install [name]
 pip install jupyter
 ```
 
-## Сохранение зависимостей
+## Работа с зависимостями (пакетами)
 
 ```bash
 # Установка зависимостей из requirements.txt
