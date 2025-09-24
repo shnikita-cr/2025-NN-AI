@@ -4,55 +4,94 @@
 
 1. Скачайте установщик с официального сайта:
     - Windows: https://www.python.org/downloads/release/python-3100/
-    - macOS: Используйте Homebrew: `brew install python@3.10`
-    - Linux: `sudo apt install python3.10`
 
 2. При установке отметьте опцию "Add Python to PATH"
 
-3. Проверьте установку:
+3. Проверьте установку: откройте консоль (Пуск -> cmd)
    ```bash
    python --version
    ```
+
+## Клонирование папки проекта
+
+Чтобы работать с примерами кода из этого репозитория, 
+его нужно "клонировать" на компьютер, т.е. сохранить.
+
+### Способ 1:
+
+- Скачать ZIP архив с сайта репозитория (зеленая кнопка -> Download ZIP)
+- Распаковать архив в вашей папке для проектов
+- Перейти в распакованную папку 
+- Открыть cmd в этой папке (ПКМ - открыть cmd/консоль) 
+
+### Способ 2: 
+- Открыть вашу папку для проектов 
+- Открыть cmd в этой папке (ПКМ - открыть cmd/консоль)
+- Загрузить репозиторий в консоли командой  
+```bash
+git clone ссылка_на_репозиторий
+```
+
+```bash
+git clone https://github.com/shnikita-cr/2025-NN-AI
+```
+
+- Перейти в папку репозитория:
+```bash
+cd 2025-NN-AI
+```
 
 ## Создание виртуального окружения
 
 Все команды далее стоит выполнять в корневой папке проекта, в данном случае `2025-NN-AI`
 
+### Установка virtualenv
+
 ```bash
-# Установка virtualenv
 python -m pip install virtualenv
+```
 
-# Создание окружения
+### Создание окружения
+
+```bash
+#формат
+python -m virtualenv имя_новой_папки
+
+#пример
 python -m virtualenv myenv
-# myenv - имя для папки с виртуальным окружением, выбирается пользователем
 ```
 
 ```bash
 # Активация окружения
-# только для Windows:
 myenv\Scripts\activate
-```
-
-```bash
-# Активация окружения
-# только для macOS/Linux:
-source myenv/bin/activate
+# в начале строки должно появиться (myenv)
 ```
 
 ## Установка библиотек через pip
 
 ```bash
 # Формат
-pip install [name] 
+pip install имя_библиотеки
 
 # Пример
 pip install jupyter
 ```
 
-## Работа с зависимостями (пакетами)
+### Установка библиотек из файла через pip
 
 ```bash
-# Установка зависимостей из requirements.txt
-pip install -r requirements.txt #  общие пакеты
-pip install -r lab1\requirements.txt # пакеты для лабораторной 1
+```bash
+# Установка из requirements.txt
+pip install -r requirements.txt # путь до файла с списком библиотек
+```
+
+```bash
+pip install -r labXX\requirements.txt # для лабораторной XX
+```
+## Запуск Jupyter
+
+```bash
+jupyter notebook #простой режим - блокнот
+# или
+jupyter lab #продвинутый режим - лаборатория
 ```
