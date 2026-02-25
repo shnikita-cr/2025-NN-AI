@@ -1,0 +1,9 @@
+torch
+torchvision
+matplotlib
+torchinfo
+tensorboard
+tensorflow
+onnx
+onnxruntime
+onnxscript
