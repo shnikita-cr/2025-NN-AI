@@ -1,0 +1,7 @@
+numpy
+gymnasium
+tensorflow
+stable-baselines3
+torch
+gymnasium[classic-control]
+torchrl
